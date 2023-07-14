@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\doctor;
+use App\Models\patient;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('medical_referrals', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(doctor::class)->constrained();
+            $table->foreignIdFor(patient::class)->constrained();
             $table->timestamps();
         });
     }

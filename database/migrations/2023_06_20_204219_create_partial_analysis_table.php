@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ana_partial_analyses', function (Blueprint $table) {
+        Schema::create('partial_analyses', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("normal_level");
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ana_partial_analyses');
+        Schema::dropIfExists('partial_analyses');
     }
 };

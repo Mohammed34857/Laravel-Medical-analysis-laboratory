@@ -45,7 +45,7 @@
                         - تحليل بول Urine Analysis <br>
                         - دهنيات الدم كاملة Lipid profile <br>
                     </p>
-                    <a href="Analysis_information" class="Show"> عرض المزيد </a>
+                    <a href="Analysis_information#d2" class="Show"> عرض المزيد </a>
                 </div>
             </div>
 
