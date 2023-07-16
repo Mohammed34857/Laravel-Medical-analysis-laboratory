@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\analysis_results>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\partial_analysis>
  */
-class AnalysisResultsFactory extends Factory
+class Partial_AnalysisFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,8 @@ class AnalysisResultsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "name"=>$this->faker->name(),
+            "normal_level"=>$this->faker->randomNumber()
         ];
     }
 }

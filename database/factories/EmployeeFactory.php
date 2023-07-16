@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\department;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,15 @@ class EmployeeFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+          "department_id"=>department::inRandomOrder()->first()->id,
+          "first_name"=>$this->faker->name(),
+          "last_name"=>$this->faker->name(),
+          "academic_achievement"=>$this->faker->text(),
+          "date_brith"=>$this->faker->date(),
+          "address"=>$this->faker->address(),
+          "phone"=>$this->faker->phoneNumber(),
+          "marital_status"=>$this->faker->randomElement(["single","married"]),
+          "date_employment"=>$this->faker->date()
         ];
     }
 }

@@ -16,8 +16,13 @@ class LaboratoryFactory extends Factory
      */
     public function definition(): array
     {
+
+
         return [
-            //
+           "name_laboratory"=>$this->faker->name(),
+           "name_manager"=>$this->faker->name(),
+           "address"=>$this->faker->address(),
+           'number_phone' => '09' . $this->faker->numberBetween(10000000, 99999999),
         ];
     }
 }

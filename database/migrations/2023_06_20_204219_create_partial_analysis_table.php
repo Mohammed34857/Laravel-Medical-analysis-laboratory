@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('partial_analyses', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->string("normal_level");
+            $table->integer("normal_level");
             $table->timestamps();
         });
     }

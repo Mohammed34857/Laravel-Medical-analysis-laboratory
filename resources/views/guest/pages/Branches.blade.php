@@ -1,18 +1,18 @@
+<link rel="stylesheet" href="/guest/css/Branches.css">
+    <link rel="stylesheet" href="/guest/css/Styel.css">
+
 <x-guest-layout>
 
-
-    <link rel="stylesheet" href="/guest/css/Branches.css">
-    <link rel="stylesheet" href="/guest/css/Styel.css">
     <x-slot name="title">
       Branches
     </x-slot>
 
+
     <x-slot name="masterheader">
-          <x-master-header/>
+        <x-master-header/>
      </x-slot>
-
+{{--
      <div id="parent">
-
         <div class="content" id="cont" ></div>
            <div class="content-text" id="cont_t">
 
@@ -21,7 +21,9 @@
              <h3> نقدم لكم جميع مخابرنا لتأمين التواصل السريع بين المواطن والمخبر </h3>
 
           </div>
-     </div>
+     </div> --}}
+
+
 
 
 
@@ -29,8 +31,8 @@
 
 
              <div >
-                 <div class="card">
-                   <h1> في حلب </h1>
+                 <div class="card" id="aleppo">
+                    <div class="text"><h1> في حلب </h1></div>
                    <div class="icon_arrow"  onclick="toggleContent(1)">
                      <i class="fa-sharp fa-solid fa-arrow-down fa-2xl" id="down2" style="color: #093c95;"></i>
 
@@ -53,8 +55,8 @@
 
 
          <div >
-             <div class="card">
-                 <h1> في دمشق </h1>
+             <div class="card" id="damascus">
+                <div class="text"><h1> في دمشق </h1></div>
                  <div class="icon_arrow" onclick="toggleContent(2)">
                      <i class="fa-sharp fa-solid fa-arrow-down fa-2xl" id="down2" style="color: #093c95;"></i>
                  </div>

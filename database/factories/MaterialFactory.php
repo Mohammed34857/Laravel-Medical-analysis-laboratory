@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\lab_ana_partial_analysis;
+use App\Models\material;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,11 @@ class MaterialFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+           "name"=>$this->faker->name(),
+           "production_date"=>$this->faker->date(),
+           "expiry_date"=>$this->faker->date(),
+           "quantity"=>$this->faker->randomNumber(),
+           "price"=>$this->faker->randomNumber()
         ];
     }
 }
